@@ -11,42 +11,7 @@
       }, 
       "id": 1, 
       "text": {
-        "title": "This is a basic POI"
-      }
-    }, 
-    {
-      "anchor": {
-        "geolocation": {
-          "lat": 17.086026, 
-          "lon": -96.844710
-        }
-      }, 
-      "icon": {
-        "url": "https://github.com/RogerOlivera/tecnologias/blob/master/1b354cec10e6065daac944fb14c432da.png"
-      }, 
-      "id": 2, 
-      "text": {
-        "description": "Description line 1\nDescription line 2\nand Description line 3", 
-        "title": "This POI has a custom icon and description"
-      }
-    }, 
-    {
-      "actions": [
-        {
-          "contentType": "text/html", 
-          "label": "Visit our hotspots documentation!", 
-          "uri": "https://www.layar.com/documentation/browser/api/getpois-response/hotspots/"
-        }
-      ], 
-      "anchor": {
-        "geolocation": {
-          "lat": 17.066026, 
-          "lon": -96.644710
-        }
-      }, 
-      "id": 3, 
-      "text": {
-        "title": "This POI has an action"
+        "title": "ITO"
       }
     }
   ], 
