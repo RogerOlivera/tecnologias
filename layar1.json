@@ -1,0 +1,112 @@
+{
+  "errorCode": 0,
+  "errorString": "ok",
+  "hotspots": [
+    {"actions": [{
+          "contentType": "text/html",
+          "label": "Foto 1: El llano",
+          "uri": "https://maldad.github.io/pictures/foto1.jpg"
+        }
+      ],
+      "anchor": {
+        "geolocation": {
+          "lat": 17.0682346,
+          "lon": -96.7197462
+        }
+      },
+      "id": 1,
+      "text": {
+        "title": "Monumento a Juárez en el Llano"
+      }
+    },
+    {"actions": [{
+          "contentType": "text/html",
+          "label": "Foto 2: Jardín Conzatti",
+          "uri": "https://maldad.github.io/pictures/foto2.jpg"
+        }
+      ],
+      "anchor": {
+        "geolocation": {
+          "lat": 17.0698094,
+          "lon": -96.7211916
+        }
+      },
+      "id": 2,
+      "text": {
+        "title": "Jardín Conzatti"
+      }
+    },
+    {"actions": [{
+          "contentType": "text/html",
+          "label": "404 not found",
+          "uri": "https://maldad.github.io/pictures/foto3.jpg"
+        }
+      ],
+      "anchor": {
+        "geolocation": {
+          "lat": 17.0630603,
+          "lon": -96.7326332
+        }
+      },
+      "id": 3,
+      "text": {
+        "title": "Jardín Morelos"
+      }
+    },
+    {"actions": [{
+          "contentType": "text/html",
+          "label": "Alameda de León",
+          "uri": "https://maldad.github.io/pictures/foto4.jpg"
+        }
+      ],
+      "anchor": {
+        "geolocation": {
+          "lat": 17.0618578,
+          "lon": -96.7258207
+        }
+      },
+      "id": 4,
+      "text": {
+        "title": "Alameda de León"
+      }
+    },
+    {"actions": [{
+          "contentType": "text/html",
+          "label": "Jardín San Pablo",
+          "uri": "https://maldad.github.io/pictures/foto5.jpg"
+        }
+      ],
+      "anchor": {
+        "geolocation": {
+          "lat": 17.0613543,
+          "lon": -96.7230472
+        }
+      },
+      "id": 5,
+      "text": {
+        "title": "Jardín San Pablo"
+      }
+    },
+    {"actions": [{
+          "contentType": "text/html",
+          "label": "Plazuela Juan Peláez de Berrio",
+          "uri": "https://maldad.github.io/pictures/foto6.jpg"
+        }
+      ],
+      "anchor": {
+        "geolocation": {
+          "lat": 17.0605183,
+          "lon": -96.7199882
+        }
+      },
+      "id": 6,
+      "text": {
+        "title": "Plazuela Juan Peláez de Berrio"
+      }
+    }
+  ],
+  "layer": "layer189v5",
+  "morePages": false,
+  "nextPageKey": null,
+  "referenceImages": []
+}
