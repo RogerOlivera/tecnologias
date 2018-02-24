@@ -5,10 +5,13 @@
     {
       "anchor": {
         "geolocation": {
-          "lat": 17.076026, 
-          "lon": -96.744710
+          "lat": 17.237849, 
+          "lon": -96.818929
         }
       }, 
+      "icon": {
+        "url": "https://raw.githubusercontent.com/RogerOlivera/tecnologias/master/1b354cec10e6065daac944fb14c432da.png"
+      },
       "id": 1, 
       "text": {
         "title": "ITO"
