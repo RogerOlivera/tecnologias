@@ -1,0 +1,131 @@
+// After the API loads, call a function to enable the search box.
+var API_KEY = 'AIzaSyB7ve9_mDBQRkYnHghwsnsRvybuPpOFpcQ';
+var CLIENT_ID = '882743690267-bj3eb867j9nk5nl1pr7s8ccd9botporp.apps.googleusercontent.com';
+var SCOPES = [ 'https://www.googleapis.com/auth/youtube','https://maps.googleapis.com/maps/api/js?key=AIzaSyB7ve9_mDBQRkYnHghwsnsRvybuPpOFpcQ&callback=initMap'];
+
+function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
+
+
+function handleAPILoaded() {
+
+  $('#search-button').attr('disabled', false);
+}
+
+function initClient(){
+gapi.client.init({
+apiKey:API_KEY,
+clientID: CLIENT_ID,
+scope: SCOPES});
+}
+
+var videoIDStringFinal= '';
+    
+// Search for a specified string.
+function search() {
+var videoIDString = '';
+    var resultsArr = [];
+
+  var q = $('#query').val();
+  var request = gapi.client.youtube.search.list({
+    q: q,
+    part: 'snippet',
+    maxResults: 50
+    });
+
+  request.execute(function(response) {
+   
+   var str = JSON.stringify(response.result);
+   var results = response.result;
+          $("#search-container").html("");
+          $.each(results.items, function(index, item) {
+            $.get("item.html", function(data) {
+                $("#search-container").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
+            });
+          });
+   // $('#search-container').html('<pre>' + str + '</pre>');
+    var par= JSON.parse(str);
+    for(var i in par.items) {
+    var item = par.items[i];
+    resultsArr.push(item);
+   // $('#search-container').append( '<pre>' + 'ID:' +item.id.videoId + ' Title:   '+ item.snippet.title  + '</pre>' )
+    
+    videoIDString = videoIDString + item.id.videoId + ",";
+
+    videoIDStringFinal = videoIDString.substring(0, videoIDString.length - 1);
+
+    
+//    console.log(resultsArr[i]);
+  }
+
+   // console.log(videoIDString); 
+    videos(videoIDStringFinal);
+  }); 
+  
+
+  
+
+}
+
+function videos( ids ){
+ 
+      var videoIDRequest = gapi.client.youtube.videos.list({
+        id: ids,
+        part: 'id,snippet,recordingDetails',
+        key: API_KEY
+      });
+
+        videoIDRequest.execute(function(response) {
+         
+          var elementos = JSON.stringify(response.result);
+          var par2= JSON.parse(elementos);
+          //console.log(par2)
+          
+              for(var i in par2.items) {
+              var items = par2.items[i];
+
+              if(items.recordingDetails && items.recordingDetails.location){
+                 var lat = items.recordingDetails.location.latitude;
+                  var long = items.recordingDetails.location.longitude;
+
+                 console.log(lat+ ',' + long);
+                 initMap( long, lat);
+
+              }
+        
+             
+              //    console.log(resultsArr[i]);
+              }
+        
+
+      });
+var markers = [];
+  function initMap( longi, latit ) {
+  
+
+    var latLong = new google.maps.LatLng(latit, longi);
+
+        var uluru = {lat: latit , lng: longi};
+        console.log(uluru);
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: latLong
+        });
+        var marker = new google.maps.Marker({
+          position: latLong,
+          map: map
+        });
+        
+       markers.push(marker);
+       setMapOnAll(map);
+
+
+      }
+
+function setMapOnAll(map) {
+
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(map);
+        }
+}
+}
+

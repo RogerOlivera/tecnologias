@@ -1,0 +1,60 @@
+ID de cliente
+
+830244155991-5vdtj7c7g3teg8rb4aqnfcnkfnpa6loj.apps.googleusercontent.com
+
+SECRETO DE CLIENTE
+
+b64qZX3mvX_BBZjheBoWTzhc
+
+
+API KEY
+
+AIzaSyBBAMV6EO7bbswZ4FIZm6KyyWSB4cijt68
+
+
+youtube apikey
+
+AIzaSyAJlb8U1581zrJdhNpswfZKw7SozTpSdvA
+
+
+
+
+
+dicoverydocs: api1,api2
+
+MAPS
+
+apikey
+
+ AIzaSyAhcQSVfyyWOpafwo_GgrtJYtg4Sl-TokY 
+
+
+
+ejemplo youtube
+http://youtube.github.io/geo-search-tool/search.html
+scopes: api1, api2
+
+
+----------------------------
+
+youtube
+
+id de cliente
+
+ 830244155991-bob7su66aq7lrtqmep3e59bdf0keh9ec.apps.googleusercontent.com 
+
+secreto de cliente
+
+ Gh8kl1tYRu88FWEzWNBFXWig 
+
+*heroku* 
+
+dearrolladores de facebook
+***************** twitter
+
+
+********
+
+clave de api
+
+AIzaSyB-4JEYt1yyCZ2KLn1q1RPW2onIqLMT3oU
